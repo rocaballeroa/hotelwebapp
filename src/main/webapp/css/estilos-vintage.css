@@ -1,0 +1,419 @@
+.navbar-vintage {
+    background-color: #92A78C !important;
+}
+
+.navbar-vintage .nav-link {
+    color: #5B584F !important;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.navbar-vintage .nav-link:hover {
+    color: #E0D5AD !important;
+}
+
+.navbar-vintage .navbar-brand,
+.navbar-vintage .navbar-text {
+    color: #F7CD82 !important;
+    font-weight: bold;
+}
+
+.btn-logout {
+    background-color: #F79E6B;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-logout:hover {
+    background-color: #E0D5AD;
+    color: #5B584F;
+}
+.dropdown-menu {
+    background-color: #fefefe;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+}
+
+.dropdown-menu a.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #5B584F;
+    font-weight: bold;
+}
+/* Asegura que el contenido no se tape por el navbar */
+body {
+    padding-top: 80px;
+}
+
+.card {
+    border: 1px solid #92A78C;
+    border-radius: 1rem;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 2px 8px rgba(91, 88, 79, 0.15);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card-body {
+    background-color: #fffefb;
+    padding: 1.25rem;
+}
+.text-success {
+    color: #228B22 !important;
+}
+
+.text-danger {
+    color: #BD2A2E !important;
+}
+.btn-primary {
+    background-color: #F79E6B;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #F7CD82;
+    color: #5B584F;
+}
+
+.btn-warning {
+    background-color: #F7CD82;
+    border: none;
+    color: #5B584F;
+    font-weight: bold;
+}
+
+.btn-warning:hover {
+    background-color: #E0D5AD;
+    color: #5B584F;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.card-footer {
+    background-color: #fdfaf5;
+    border-top: none;
+    border-radius: 0 0 1rem 1rem;
+}
+/* ------------------- BOTONES PERSONALIZADOS ------------------- */
+
+/* Botón Registrar / Actualizar - Azul Profundo */
+.btn-registrar {
+    background-color: #23698C; /* Azul principal */
+    color: #FAFBF6;
+    font-weight: bold;
+    border: none;
+}
+.btn-registrar:hover {
+    background-color: #1e5a77; /* Azul más apagado */
+    color: #FAFBF6;
+}
+
+/* Botón Editar - Gris Oscuro */
+.btn-editar {
+    background-color: #3B3936; /* Gris oscuro */
+    color: #FAFBF6;            /* Letras blanco hueso */
+    font-weight: bold;
+    border: none;
+}
+
+.btn-editar:hover {
+    background-color: #504e4b; /* Gris un poco más claro al pasar el mouse */
+    color: #FAFBF6;            /* Letras mantienen el blanco hueso */
+}
+
+/* Botón Eliminar - Rojo */
+.btn-eliminar {
+    background-color: #AE3425; /* Rojo intenso */
+    color: #FAFBF6;
+    font-weight: bold;
+    border: none;
+}
+.btn-eliminar:hover {
+    background-color: #8e2a1e; /* Rojo oscuro */
+    color: #FAFBF6;
+}
+
+/* Botón Verde - Confirmar / Guardar */
+.btn-verde {
+    background-color: #468966; /* Verde armonioso */
+    color: #FAFBF6;
+    font-weight: bold;
+    border: none;
+}
+.btn-verde:hover {
+    background-color: #3a7658; /* Verde más apagado */
+    color: #FAFBF6;
+}
+
+/* Botón Neutro / Beige - Secundario */
+.btn-beige {
+    background-color: #E0D5AD; /* Beige suave */
+    color: #5B584F;
+    font-weight: bold;
+    border: none;
+}
+.btn-beige:hover {
+    background-color: #D3CEB0; /* Hueso más neutro */
+    color: #5B584F;
+}
+footer h5 {
+    margin-bottom: 1rem;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+    color: #365B73;
+}
+.titulo-panel {
+    background-color: #fff8e1;
+    color: #6b4e16;
+    font-weight: bold;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 40px auto;
+    font-size: 1.8rem;
+    max-width: 600px;
+}
+        .tarjeta {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #fff;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .tarjeta-cancelada {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+        .etiqueta-cancelada {
+            background-color: #dc3545;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .btn-group-custom {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .estado {
+            font-weight: bold;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+        .close {
+            position: absolute;
+            right: 20px; top: 15px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* === TARJETAS DE HABITACIONES === */
+.habitaciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    align-content: flex-start; 
+}
+
+/* Cada tarjeta debe tener tamaño fijo */
+.tarjeta {
+    width: 260px; /* 🔒 ancho fijo para evitar que crezca */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+    flex-shrink: 0; 
+    flex: 0 0 auto;
+}
+
+/* Imagen fija dentro de la tarjeta */
+.tarjeta img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+
+.tarjeta button {
+    margin-top: auto;
+}
+
+
+.tarjeta:hover {
+    transform: scale(1.02);
+}
+
+
+/* === MODAL PERSONALIZADO === */
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+#modal .contenido {
+    background-color: #fff;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* === FORMULARIO EN MODAL === */
+#modal .form-group {
+    margin-bottom: 15px;
+}
+
+#modal label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #5e3c2c;
+}
+
+#modal input[type="datetime-local"],
+#modal input[type="number"] {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* === BOTONES DEL MODAL === */
+.btn.confirmar {
+    background-color: #27ae60;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn.confirmar:hover {
+    background-color: #1e8449;
+}
+
+.btn.cancelar {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn.cancelar:hover {
+    background-color: #c0392b;
+}
+
+/* === TÍTULO DE LA PÁGINA === */
+h2 {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: #4a2c2a;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.btn-group-custom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    justify-content: center;
+}
+
+.btn-group-custom .btn {
+    flex: 1 1 calc(50% - 10px); /* dos por fila con espacio */
+    min-width: 120px;
+    text-align: center;
+    font-size: 14px;
+    padding: 8px 12px;
+    white-space: nowrap;
+    transition: background-color 0.2s ease-in-out;
+}
+.btn-igual {
+    width: 160px;             /* Fijo: todos los botones iguales */
+    text-align: center;
+    display: inline-block;
+    padding: 8px 0;           /* Altura uniforme */
+    white-space: nowrap;      /* Evita saltos de línea */
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* 🟢 Reducir espacio entre campos al mínimo */
+.tarjeta p {
+    margin-bottom: 4px; /* antes 8px */
+}
+
+/* 🔵 Casi nada de espacio entre campos y botones */
+.btn-group-custom {
+    margin-top: 6px; /* antes 12px */
+}
+
+/* 🔴 Eliminar márgenes verticales innecesarios en los botones */
+.tarjeta form,
+.tarjeta a {
+    margin: 0;
+}
+
+/* 🟣 Asegurar que los botones estén bien alineados y sin espacio abajo */
+.btn-group-custom .btn {
+    margin-bottom: 0;
+}
+.tarjeta h5 {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-size: 18px;
+    color: #333;
+}

@@ -1,0 +1,163 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.hotel</groupId>
+    <artifactId>HotelWeb</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+    <name>HotelWeb</name>
+
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+        <!-- Definimos versiones como propiedades para mejor mantenimiento -->
+        <jasperreports.version>6.20.6</jasperreports.version>
+        <itext.version>2.1.7</itext.version>
+    </properties>
+
+    <dependencies>
+        <!-- Servlet API para Java EE -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- JSTL -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+        <!-- Conector MySQL -->
+<dependency>
+    <groupId>com.mysql</groupId>
+    <artifactId>mysql-connector-j</artifactId>
+    <version>8.0.33</version>
+</dependency>
+        
+        <!-- JavaMail -->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.7</version>
+        </dependency>
+
+
+
+    <!-- JasperReports -->
+    <dependency>
+        <groupId>net.sf.jasperreports</groupId>
+        <artifactId>jasperreports</artifactId>
+        <version>${jasperreports.version}</version>
+    </dependency>
+
+        <!-- iText para exportar a PDF -->
+        <dependency>
+            <groupId>com.lowagie</groupId>
+            <artifactId>itext</artifactId>
+            <version>${itext.version}</version>
+        </dependency>
+
+        <!-- Dependencias necesarias para Java 17 -->
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>3.0.13</version>
+            <type>pom</type>
+        </dependency>
+        
+        <!-- Para exportar a Excel -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.2.3</version>
+        </dependency>
+        
+        <!-- JasperReports Fonts -->
+        <dependency>
+            <groupId>net.sf.jasperreports</groupId>
+            <artifactId>jasperreports-fonts</artifactId>
+            <version>${jasperreports.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>HotelWeb</finalName>
+        <plugins>
+            
+<plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>jasperreports-maven-plugin</artifactId>
+    <version>1.0-beta-2</version>
+    <executions>
+        <execution>
+            <phase>process-resources</phase>
+            <goals>
+                <goal>compile-reports</goal>
+            </goals>
+        </execution>
+    </executions>
+    <configuration>
+        <sourceDirectory>src/main/resources/reportes</sourceDirectory>
+        <outputDirectory>${project.build.outputDirectory}/reportes</outputDirectory>
+        <compiler>net.sf.jasperreports.compilers.JRGroovyCompiler</compiler>
+    </configuration>
+    <dependencies>
+        <dependency>
+            <groupId>net.sf.jasperreports</groupId>
+            <artifactId>jasperreports</artifactId>
+            <version>6.20.6</version>
+        </dependency>
+    </dependencies>
+</plugin>
+            
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.4.0</version>
+                <configuration>
+                    <!-- Incluir recursos estáticos como reportes .jasper -->
+                    <webResources>
+                        <resource>
+                            <directory>src/main/resources</directory>
+                            <includes>
+                                <include>**/*.jasper</include>
+                                <include>**/*.jrxml</include>
+                            </includes>
+                            <targetPath>WEB-INF/classes</targetPath>
+                        </resource>
+                    </webResources>
+                </configuration>
+            </plugin>
+            
+            <!-- Plugin para compilar con Java 17 -->
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.11.0</version>
+    <configuration>
+        <release>17</release> <!-- Usa release en lugar de source/target -->
+    </configuration>
+</plugin>
+        </plugins>
+        
+        
+    </build>
+    <pluginRepositories>
+    <pluginRepository>
+        <id>codehaus-mojo</id>
+        <url>https://repo.maven.apache.org/maven2</url>
+    </pluginRepository>
+</pluginRepositories>
+</project>
