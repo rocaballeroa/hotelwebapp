@@ -31,7 +31,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: java-app
-          path: target/HotelWeb.war
+          path: target/ROOT.war
 
   deploy:
     runs-on: ubuntu-latest
@@ -60,5 +60,5 @@ jobs:
         with:
           app-name: 'HotelBrisaAndina'
           slot-name: 'Production'
-          path: HotelWeb.war
+          path: ROOT.war
           
