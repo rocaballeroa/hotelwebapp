@@ -62,4 +62,4 @@ jobs:
         with:
           app-name: 'HotelBrisaAndina'
           slot-name: 'Production'
-          package: target/HotelWeb.war
+          package: HotelWeb.war
